@@ -1,89 +1,125 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
 
-    <title>Functional programming with Elixir</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/reveal.css" />
-    <link rel="stylesheet" href="css/theme/black.css" />
+  <title>Functional programming with Elixir</title>
 
-    <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="lib/css/monokai.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/reveal.css" />
+  <link rel="stylesheet" href="css/theme/black.css" />
 
-    <!-- Printing and PDF exports -->
-    <script>
-      var link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.type = "text/css";
-      link.href = window.location.search.match(/print-pdf/gi)
-        ? "css/print/pdf.css"
-        : "css/print/paper.css";
-      document.getElementsByTagName("head")[0].appendChild(link);
-    </script>
-  </head>
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/monokai.css" />
 
-  <body>
-    <div class="reveal">
-      <div class="slides">
-        <section
-          data-background-color="#ffffff"
-          data-background-image="img/logo2.png"
-          data-background-opacity="0.5"
-          data-background-size="contain"
-          data-background-position="left"
-					>
-          <h1 style="text-align: right;">
-            <b>functional</b>
-          </h1>
-          <h1 style="text-align: right;">
-            <b>programming</b>
-          </h1>
-          <h1 style="text-align: right;">
-							<b>with <font color="#4e2a8e">Elixir</font></b>
-						</h1>
-					</section>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.type = "text/css";
+    link.href = window.location.search.match(/print-pdf/gi) ?
+      "css/print/pdf.css" :
+      "css/print/paper.css";
+    document.getElementsByTagName("head")[0].appendChild(link);
+  </script>
+</head>
 
-        <section>Slide 1</section>
-        <section>Slide 2</section>
-      </div>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section data-background-color="#ffffff" data-background-image="img/logo2.png" data-background-opacity="0.5"
+        data-background-size="contain" data-background-position="left">
+        <h1 style="text-align: right;">
+          <b>functional</b>
+        </h1>
+        <h1 style="text-align: right;">
+          <b>programming</b>
+        </h1>
+        <h1 style="text-align: right;">
+          <b>with <font color="#4e2a8e">Elixir</font></b>
+        </h1>
+      </section>
+
+      <section data-background-color="#ffffff" data-background-image="img/bigelixir_gif-white.gif"
+        data-background-opacity="0.5" data-background-size="contain">
+        <h2>
+          So, what's all about Elixir?
+        </h2>
+        <img src="img/jose-valim.jpg" class="fragment">
+      </section>
+
+      <section data-background-color="#ffffff" data-background-image="img/bigelixir_gif-white.gif"
+        data-background-opacity="0.5" data-background-size="contain" data-transition="none">
+        <p data-fragment-index="9" class="fragment fade-out">
+          <img src="img/companies/discord.png" style="width: 150px;">
+          <img src="img/companies/Pinterest.svg" data-fragment-index="1" class="fragment" style="width: 150px;">
+          <img src="img/companies/motorola.png" data-fragment-index="2" class="fragment" style="width: 150px;">
+        </p>
+        <p>
+          <span data-fragment-index="9" class="fragment fade-out">
+            <img src="img/companies/rabbitmq.png" data-fragment-index="3" class="fragment" style="width: 150px;">
+          </span>
+          <img src="img/companies/ericsson.png" data-fragment-index="4" class="fragment" style="width: 150px;">
+          <span data-fragment-index="9" class="fragment fade-out">
+            <img src="img/companies/ibm.png" data-fragment-index=5" class="fragment" style="width: 150px;">
+          </span>
+        </p>
+        <p data-fragment-index="9" class="fragment fade-out">
+          <img src="img/companies/cisco.png" data-fragment-index="6" class="fragment" style="width: 150px;">
+          <img src="img/companies/heroku.png" data-fragment-index="7" class="fragment" style="width: 150px;">
+          <img src="img/companies/whatsapp.png" data-fragment-index="8" class="fragment" style="width: 150px;">
+        </p>
+      </section>
+
+      <section data-background-image="img/ericsson-offices.jpg" data-background-opacity="0.3">
+        <h2>
+          So, what's all about Erlang?
+        </h2>
+        <p class="fragment">Concurrent</p>
+        <p class="fragment">Distributed</p>
+        <p class="fragment">Fault-tolerant</p>
+        <p class="fragment">Hot swapping</p>
+        <p class="fragment">Highly available</p>
+      </section>
+
+      <section>Slide 1</section>
+      <section>Slide 2</section>
     </div>
+  </div>
 
-    <script src="js/reveal.js"></script>
+  <script src="js/reveal.js"></script>
 
-    <script>
-      // More info about config & dependencies:
-      // - https://github.com/hakimel/reveal.js#configuration
-      // - https://github.com/hakimel/reveal.js#dependencies
-      Reveal.initialize({
-        // Add the current slide number to the URL hash so that reloading the
-        // page/copying the URL will return you to the same slide
-        hash: true,
+  <script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+      // Add the current slide number to the URL hash so that reloading the
+      // page/copying the URL will return you to the same slide
+      hash: true,
 
-        // Push each slide change to the browser history. Implies `hash: true`
-        history: true,
-        dependencies: [
-          {
-            src: "plugin/markdown/marked.js"
-          },
-          {
-            src: "plugin/markdown/markdown.js"
-          },
-          {
-            src: "plugin/notes/notes.js",
-            async: true
-          },
-          {
-            src: "plugin/highlight/highlight.js",
-            async: true
-          }
-        ]
-      });
-    </script>
-  </body>
+      // Push each slide change to the browser history. Implies `hash: true`
+      history: true,
+      dependencies: [{
+          src: "plugin/markdown/marked.js"
+        },
+        {
+          src: "plugin/markdown/markdown.js"
+        },
+        {
+          src: "plugin/notes/notes.js",
+          async: true
+        },
+        {
+          src: "plugin/highlight/highlight.js",
+          async: true
+        }
+      ]
+    });
+  </script>
+</body>
+
 </html>
