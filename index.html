@@ -40,13 +40,6 @@
         <h1 style="text-align: right;">
           <b>with <font color="#4e2a8e">Elixir</font></b>
         </h1>
-        <aside class="notes">
-          -Predicar palabra de la programacion funcional, especifica% en Elixir.
-          -No es un paradigma nuevo, decadas, pero de cuando en cuando suena fuerte.
-          -Se programa de una manera declarativa, donde las funciones funcionan como una caja negra, osea sabemos lo que
-          la funcion hace, no como lo hace
-          -Promueve la inmutabilidad, esto significa que no cambie estado de variable
-        </aside>
       </section>
 
       <section data-background-color="#ffffff" data-background-image="img/slide-1/bigelixir_gif-white.gif"
@@ -55,12 +48,6 @@
           So, what's all about Elixir?
         </h2>
         <img src="img/slide-1/jose-valim.jpg" class="fragment" />
-        <aside class="notes">
-          - Fue creado en 2011 por Jose Valim
-          - core rails dev
-          - razones ( problemas en manejo de concurrencia de ruby)
-          - Influencias: Erlang, ruby y Clojure
-        </aside>
       </section>
 
       <section data-background-color="#ffffff" data-background-image="img/slide-1/bigelixir_gif-white.gif"
@@ -84,19 +71,6 @@
           <img src="img/slide-2/ibm.png" data-fragment-index="7" class="fragment" style="width: 150px;">
           <img src="img/slide-2/whatsapp.png" data-fragment-index="8" class="fragment" style="width: 150px;" />
         </p>
-        <aside class="notes">
-          -- Discord (voip para gamers) maneja 5m usuarios concurrentes
-          -- Pinterest sstema de notificaciones (150m usuarios mensuales)
-          -- Motorola Solutions elixir-erlang para desarrollo de sistemas de comuincacion
-
-          -- Heroku Ruteo a contenedores con erlang, además de aplicaciones internas con elixir
-          --Ericsson alrededor del 40% de tráfico móvil mundial funciona con soluciones de red construidas en erlang
-          --RabbitMQ, Sistema de manejo de mensajería usado por miles de empresas
-
-          -- Cisco alrededor del 90% del trafico de internet funciona a través de nodos controlados por erlang
-          --IBM Cloudant funciona con erlang para sistema full-text search
-          --whatsapp eralnd maneja 450 mill. ususarios
-        </aside>
       </section>
 
       <section data-background-image="img/slide-3/ericsson-offices.jpg" data-background-opacity="0.3">
@@ -108,26 +82,11 @@
         <p class="fragment">Fault-tolerant</p>
         <p class="fragment">Hot swapping</p>
         <p class="fragment">Highly available</p>
-        <aside class="notes">
-          creado en 86
-          para mejorar sistemas de telefonía (switches)
-          Usa maquina virtual BEAM, la cual compila a C
-          - Concurrente: procesos que puedan ejecutarse al mismo tiempo
-          - Distribuido: también que pueda ejecutarse en distintos computadores, pudiendo compartir información entre
-          ellos
-          - Tolerante a fallos: Que pueda continuar funcionando después de algún error
-          - Que se pueda cambiar en caliente, o mientras funciona, sin que esto signifique una caida del sistema.
-          - Y que esto eventualmente se traduce en construir sistemas confiables con un alto rendimiento operacional.
-        </aside>
       </section>
 
       <section data-background-image="img/slide-3/ericsson-offices.jpg" data-background-opacity="0.5"
         data-transition="none" data-background-color="#ffffff">
         <img src="img/slide-4/step-1.png" />
-        <aside class="notes">
-          Para ejemplificar, ellos querían construir switches telefónicos, donde 2 personas se comunicasen al mismo
-          tiempo.
-        </aside>
       </section>
       <section data-background-image="img/slide-3/ericsson-offices.jpg" data-background-opacity="0.5"
         data-transition="none" data-background-color="#ffffff">
@@ -136,29 +95,14 @@
       <section data-background-image="img/slide-3/ericsson-offices.jpg" data-background-opacity="0.5"
         data-transition="none" data-background-color="#ffffff">
         <img src="img/slide-4/step-3.png" />
-        <aside class="notes">
-          Pero que además pudiese manejar varias conexiones al mismo tiempo, o varias personas hablando a la vez. Aquí
-          entra el concepto de concurrencia de multiples personas comunicandose al mismo tiempo.
-        </aside>
       </section>
       <section data-background-image="img/slide-3/ericsson-offices.jpg" data-background-opacity="0.5"
         data-transition="none" data-background-color="#ffffff">
         <img src="img/slide-4/step-4.png" />
-        <aside class="notes">
-          También nace el concepto de distribución, donde switches se comunican entre ellos, por ejemplo alguien que
-          quiera llamar a una persona que esté en otra ciudad y tengan que intercambiar información entre switches para
-          saber si la persona está disponible o no.
-          En caso que quisieran actualizar la información de estos switches, eso no debería suponer un corte de las
-          llamadas, las personas deberían poder ser capaces de seguir hablando.
-        </aside>
       </section>
       <section data-background-image="img/slide-3/ericsson-offices.jpg" data-background-opacity="0.5"
         data-transition="fade" data-background-color="#ffffff">
         <img src="img/slide-4/step-5.png" />
-        <aside class="notes">
-          Esto en el fondo es el mismo escenario que vemos actualmente en sistemas web, donde varias personas se
-          comunican.
-        </aside>
       </section>
 
       <section data-background-color="#ffffff" data-background-image="img/slide-1/bigelixir_gif-white.gif"
@@ -173,24 +117,6 @@
         <p class="fragment">Tooling</p>
         <p class="fragment">Compiled to BEAM</p>
         <p class="fragment">Erlang-powered</p>
-        <aside class="notes">
-          1)Elixir es Erlang para nuevas generaciones.
-          Se podría decir que erlang como lenguaje no fue diseñado como un lenguaje de propósito general como java, js,
-          C#, etc, donde de alguna forma su sintaxis fue desarrollandose para ser similar entre lenguajes populares
-          entre desarrolladores. Erlang se encuentra basado en lenguajes como prolog o smalltalk, (lenguajes de años 70)
-          de los cuales su sintaxis no es muy amigable.
-          2)En erlang se pueden desarrollar aplicaciones web, pero de alguna forma han fracasado en popularizarlo,
-          elixiri fue construido con eso en mente
-          3)Elixir está basado en ruby, aspectos de sintaxis.
-          4)El lenguaje se peude extender de acuerdo a nuestras necesidades, pudiendo hacer metaprogramacion o crear DSL
-          5)Herramientas disponibles para facilitar desarrollo, como mix para crear proyectos, ejecutar tareas, correr
-          tests.
-          Integra con Hex, para manejo de paquetes
-          iex shell interactivo
-          6)Todo es compilado al mismo bytecode que interpreta BEAM.
-          7)No solo el lenguaje funciona con erlang como base, sino que además se peude acceder a todas las librerias
-          disponibes en erlang
-        </aside>
       </section>
 
       <section data-background-color="#ffffff">
@@ -201,11 +127,6 @@
         <h3>
           Show me the code
         </h3>
-        <aside class="notes">
-          Suficiente palabreria, a mostrar algo de codigo
-          Una repasada sobre los aspectos mas importantes del lenguaje o los que causan mas complicacion.
-
-        </aside>
       </section>
 
       <section data-transition="none" data-background-image="img/slide-6/3922970674_eed753c003_b.jpg"
@@ -227,13 +148,6 @@ end
 MyClass.please_dont_modify_this(my_mutable_values)
 my_mutable_values # => [10, ???]
         </code></pre>
-        <aside class="notes">
-          Elixir fuerza que los datos no puedan ser alterados una vez creados.
-          Como ejemplo este codigo en ruby
-          Piensa en este codigo corriendo concurrentemente (en procesos o threads) , nunca se podría saber de que forma
-          se
-          ejecutaria si todos lo modifican a la vez
-        </aside>
       </section>
 
       <section data-transition="none" data-background-image="img/slide-6/3922970674_eed753c003_b.jpg"
@@ -255,11 +169,6 @@ end
 MyModule.please_dont_modify_this(my_immutable_values)
 my_immutable_values # => [10]
         </code></pre>
-        <aside class="notes">
-          -En caso contrario en elixir todos los datos son inmutables. Poniendo el mismo supuesto del código corriendo
-          concurrentemente, en caso de que la variable sea modificada, elixir realizará una copia del original donde da
-          lo mismo los cambios que se realicen dentro de la funcion, la variable origianl no cambia de valor.
-        </aside>
       </section>
 
       <section data-transition="none" data-background-image="img/slide-6/3922970674_eed753c003_b.jpg"
@@ -281,9 +190,6 @@ end
 MyModule.please_dont_modify_this(my_immutable_values)
 my_immutable_values # => [10]
         </code></pre>
-        <aside class="notes">
-          -Implicancias en rendimiento, podria verse como ineficiente, pero no lo es.
-        </aside>
       </section>
 
       <section data-transition="none" data-background-image="img/slide-6/3922970674_eed753c003_b.jpg"
@@ -306,11 +212,6 @@ end
 MyModule.please_dont_modify_this(my_immutable_values)
 my_immutable_values # => [10]
         </code></pre>
-        <aside class="notes">
-          Elixir sabe que los datos son
-          inmutables, por lo que puede reusarlos en parte para construir nuevas estructuras.
-          La mayoria de lenguajes crearian una nueva lista conteniendo los valores de la original.
-        </aside>
       </section>
 
       <section data-transition="none" data-background-image="img/0575-ShapeSortingCube-3PcsOut_1024x1024.png"
@@ -327,11 +228,6 @@ my_immutable_values # => [10]
 
 
         </code></pre>
-        <aside class="notes">
-          Cuando un programador ve esto podría decir que a una variable "a" se le está asignando el valor "hola", pero
-          en elixir el simbolo = es un operador de matching, que es mas bien una afirmación de que tanto el valor de la
-          izquierda como de la derecha son iguales y elixir busca que estos valores coincidan.
-        </aside>
       </section>
 
       <section data-transition="none" data-background-image="img/0575-ShapeSortingCube-3PcsOut_1024x1024.png"
@@ -348,11 +244,6 @@ iex(2)> "hola" = a
 
 
         </code></pre>
-        <aside class="notes">
-          Por ejemplo en este caso la variable "a" ya tiene asignado el valor "hola", entonces el matching fue existoso,
-          ya que ambos lados de la aserción son iguales.
-          Bastante similar a lo que seria una ecuación matemática.
-        </aside>
       </section>
 
       <section data-transition="none" data-background-image="img/0575-ShapeSortingCube-3PcsOut_1024x1024.png"
@@ -369,9 +260,6 @@ iex(2)> "hola" = a
 iex(3)> "hello" = a
 ** (MatchError) no match of right hand side value: "hola"
         </code></pre>
-        <aside class="notes">
-          En el último caso simplemente falla, ya que "hello" no es igual a "hola".
-        </aside>
       </section>
 
       <section data-transition="none" data-background-image="img/0575-ShapeSortingCube-3PcsOut_1024x1024.png"
@@ -759,13 +647,6 @@ Calc.sum([3, 5, 7]) # 15
         <h2>
           Give me moar elixir
         </h2>
-        <aside class="notes">
-          - structs
-          - let it crash, concepto de procesos, supervisores,
-          - Open Telecom Platform
-          - Agents, Genserver
-          - Phoenix
-        </aside>
         <p>
           <a class="fragment" href="https://elixirschool.com">
             elixirschool.com
