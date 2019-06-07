@@ -670,53 +670,24 @@ Calc.sum([3, 5, 7]) # 15
         <h2>
           Questions?
         </h2>
-        <a href="http://alagos.github.io/elixir-talk">
-          alagos.github.io/elixir-talk
-        </a>
+
+        <p>
+          <a href="http://alagos.github.io/elixir-talk">
+            alagos.github.io/elixir-talk
+          </a>
+        </p>
+        <p>
+          <a href="https://github.com/alagos">
+            github.com/alagos
+          </a>
+        </p>
+        <p>
+          <a href="https://twitter.com/nomesigaporfa">
+            @nomesigaporfa
+          </a>
+        </p>
       </section>
 
-      <section data-transition="none" data-background-image="img/e3_2019_warp_pipe_pass_0.jpg"
-        data-background-opacity="0.5" data-background-color="#ffffff">
-        <h2>
-          Pipes (<b>
-            <font color="#4e2a8e">|&gt;</font>
-          </b>)
-        </h2>
-        <pre class="fragment"><code class="elixir" data-line-numbers>store = Store.find_nearest
-games = Game.best_selling_for(store)
-customers = Customer.find_by_games(games)
-invoices = Calc.generate_invoices(customers, 2019)
-</code></pre>
-      </section>
-
-      <section data-transition="none" data-background-image="img/e3_2019_warp_pipe_pass_0.jpg"
-        data-background-opacity="0.5" data-background-color="#ffffff">
-        <h2>
-          Pipes (<b>
-            <font color="#4e2a8e">|&gt;</font>
-          </b>)
-        </h2>
-        <pre><code class="elixir" data-line-numbers>invoices = Calc.generate_invoices(
-  Customer.find_by_games(
-    Game.best_selling_for(Store.find_nearest)
-  ), 2019
-)
-</code></pre>
-      </section>
-
-      <section data-transition="none" data-background-image="img/e3_2019_warp_pipe_pass_0.jpg"
-        data-background-opacity="0.5" data-background-color="#ffffff">
-        <h2>
-          Pipes (<b>
-            <font color="#4e2a8e">|&gt;</font>
-          </b>)
-        </h2>
-        <pre><code class="elixir" data-line-numbers>invoices = Store.find_nearest
-  |> Game.best_selling_for
-  |> Customer.find_by_games
-  |> Calc.generate_invoices(2019)
-</code></pre>
-      </section>
     </div>
   </div>
 
